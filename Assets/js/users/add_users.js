@@ -6,7 +6,7 @@ $("#addUserForm").submit(function (e) {
 
 
     $.ajax({
-        url: "http://localhost/WMA2-CMS/app/RequestManager/RequestManager.php?request-type=add_user",
+        url: "http://localhost/PIXA-BAY/app/RequestManager/RequestManager.php?request-type=add_user",
         method: "POST",
         data: data,
         dataType: "json",
