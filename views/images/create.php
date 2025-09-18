@@ -11,7 +11,7 @@ require_once __DIR__. "../../../views/layout/sidebar.php";
 <div class="add-image-form">
   <h2>Add New Image</h2>
   
-  <form action="upload.php" method="POST" enctype="multipart/form-data">
+  <form action="../../App/RequestManager/RequestManager.php" method="POST" enctype="multipart/form-data">
     
     <div class="form-group">
       <label for="name">Name</label>

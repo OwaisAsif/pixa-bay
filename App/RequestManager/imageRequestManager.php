@@ -7,25 +7,25 @@ header("Content-Type: application/json");
 
 $controller = new UserController(); 
 
-// if ($_SERVER['REQUEST_METHOD'] == "GET") {
-//     $request_type = isset($_GET["request-type"]) ? $_GET["request-type"] : null;
+if ($_SERVER['REQUEST_METHOD'] == "GET") {
+    $request_type = isset($_GET["request-type"]) ? $_GET["request-type"] : null;
 
-//     if ($request_type == 'get-all-users') {
-//      echo json_encode($controller->getAllUsers($conn));
-// exit;
-//     }
-//     if ($request_type == 'get_single_user') {
-//         echo json_encode($controller->getUser($conn, $_GET));
-//         exit;
-//     }
-// }
+    if ($request_type == 'get-all-images') {
+     echo json_encode($controller->getAllimages($conn));
+exit;
+    }
+    // if ($request_type == 'get_single_user') {
+    //     echo json_encode($controller->getUser($conn, $_GET));
+    //     exit;
+    // }
+}
 
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
     
     $request_type = $_POST["request-type"] ?? $_GET["request-type"] ;
 
     if ($request_type == 'add_image') {
-        echo json_encode($controller->addimage($conn, $_POST));
+        echo json_encode($controller->addimages($conn, $_POST));
         exit;
     }
 //     if ($request_type == 'update_user') {
