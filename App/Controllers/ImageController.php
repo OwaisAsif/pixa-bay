@@ -42,7 +42,7 @@ class ImageController {
             }
                
         } 
-        return ["users" => $users, "success" => true];
+        return ["image" => $images, "success" => true];
     }    
 
   public function UpdateImages($conn, $data) {
@@ -59,7 +59,7 @@ class ImageController {
             return ["success" => false, "message" => "Missing user id"];
         }
 
-        $sql = "UPDATE users 
+        $sql = "UPDATE image 
                 SET first_name = '$first_name',
                     last_name  = '$last_name',
                     email      = '$email',
@@ -81,15 +81,18 @@ class ImageController {
 
        public function addimages($conn, $data) {
     try { 
-        $first_name = $data["first_name"];
-        $last_name  = $data["last_name"];
-        $email      = $data["email"];
-        $phone      = $data["phone"];
-        $pass       = $data["pass"];
-        $gender     = $data["gender"];
-
-        $sql = "INSERT INTO users (first_name,last_name,phone,email,password,gender) 
-                VALUES ('$first_name','$last_name','$phone','$email','$pass','$gender')";
+    $name = $data["name"];  
+    $description = $data["description"];
+    $category = $data["category"]; 
+    $file_name = $_FILES["image"];
+    $temp_name = $_FILES["image"];
+    $folder = '../../assets/images/'. $file_name;
+    $sql = mysqli_query($conn, "insert into image (file) values ('$file_name')");
+          if(move_uploaded_file($temp_name,$folder)){
+            echo "file uploaded";
+            } else {
+             echo "file  not uploaded";
+            }
 
         if ($conn->query($sql) === TRUE) {
             return ["success" => true, "message" => "User added successfully"];

@@ -1,5 +1,5 @@
 <?php
-include '../../app/Controllers/AuthController.php';
+include '../../App/Controllers/AuthController.php';
 include '../utilities/server.php';
 
 header("Content-Type: application/json"); 
