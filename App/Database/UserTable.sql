@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Sep 17, 2025 at 12:14 PM
+-- Generation Time: Aug 30, 2025 at 02:56 PM
 -- Server version: 8.0.30
 -- PHP Version: 8.1.10
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `pixabay`
+-- Database: `cms_db`
 --
 
 -- --------------------------------------------------------

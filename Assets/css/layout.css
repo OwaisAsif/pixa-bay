@@ -1,0 +1,264 @@
+    body {
+        box-sizing: border-box;
+        margin: 0;
+        overflow-x: hidden;
+        background-color: #F7F7F7;
+        --second-img-gap: 120px;
+        --linear-color-2: #4269A0;
+    }
+
+    /*==========
+    s
+    =========*/
+    #side-bar {
+        padding: 15px;
+        background-color: #F7F7F7;
+        width: 210px;
+        height: 110vh;
+        position: fixed;
+        border-right: 1px solid rgb(197, 197, 197);
+
+    }
+
+    .side-bar-body {
+        cursor: pointer;
+    }
+
+    #side-bar h4 {
+        text-align: center;
+        font-size: 25px;
+        font-weight: 600;
+        margin-bottom: 30px;
+        cursor: pointer;
+
+    }
+
+    #side-bar span {
+        color: silver;
+        font-size: 15px;
+        font-weight: 600;
+        cursor: pointer;
+
+    }
+
+    .user-icon {
+        color: #838886;
+        font-size: 32px;
+        margin-right: 15px;
+    }
+
+    .main {
+        padding: 110px 20px 20px 20px;
+        margin-left: 210px;
+        z-index: 2;
+    }
+
+    .side-bar-body h5 {
+        font-size: 20px;
+        font-weight: 600;
+        color: #838886;
+    }
+
+    .side-bar-body-icons:hover h5 {
+        border-radius: 10px;
+        background-color: #F7F7F7;
+
+        font-weight: 700;
+        color: black;
+
+    }
+
+    .side-bar-body-icons:hover {
+        border-radius: 10px;
+        background-color: #F7F7F7;
+
+        color: black;
+
+    }
+
+    .side-bar-body-icons:hover>.badge-icon {
+        border-radius: 10px;
+        background-color: #F7F7F7;
+
+        color: green;
+    }
+
+    .side-bar-body-icons:hover>.user-icon {
+        color: green;
+    }
+
+    .side-bar-body-icons:hover>.arrow-icon,
+    .side-bar-body-icons:hover>.discounts-icon,
+    .side-bar-body-icons:hover>.services-icon,
+    .side-bar-body-icons:hover>.tickets-icon,
+    .side-bar-body-icons:hover>.product-icon,
+    .side-bar-body-icons:hover>.payment-icon,
+    .side-bar-body-icons:hover>.suppeiers-icon,
+    .side-bar-body-icons:hover>.customers-icon {
+
+        color: green;
+    }
+
+    .customers-icon {
+        font-size: 25px;
+        margin-top: 8px;
+        margin-left: 6px;
+        color: #838886;
+
+    }
+
+    .suppeiers-icon {
+        font-size: 25px;
+        margin-top: 8px;
+        color: #838886;
+        margin-left: 11px;
+    }
+
+    .payment-icon {
+        font-size: 25px;
+        margin-top: 8px;
+        margin-left: 19px;
+        color: #838886;
+
+    }
+
+    .product-icon {
+        font-size: 25px;
+        margin-top: 8px;
+        margin-left: 27px;
+        color: #838886;
+
+    }
+
+    .badge-icon {
+        color: #838886;
+        margin-top: 8px;
+        font-size: 25px;
+        margin-left: 10px;
+    }
+
+    .arrow-icon {
+        font-size: 25px;
+        margin-top: 8px;
+        color: #838886;
+
+        margin-left: 60px;
+    }
+
+    .services-icon {
+        font-size: 25px;
+        color: #838886;
+        margin-top: 8px;
+        margin-left: 26px;
+    }
+
+    .tickets-icon {
+        font-size: 25px;
+        margin-top: 8px;
+        margin-left: 36px;
+        color: #838886;
+
+    }
+
+
+    .badge-icon {
+        font-size: 25px;
+        margin-left: 48px;
+    }
+
+    .discounts-icon {
+        font-size: 25px;
+        color: #838886;
+        margin-top: 8px;
+        margin-left: 12px;
+    }
+
+
+    #nav-bar {
+        width: 85%;
+        height: 90px;
+        background-color: #F7F7F7;
+        padding: 20px;
+        position: fixed;
+        right: 0;
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    }
+
+    #nav-bar input {
+        width: 90%;
+    }
+
+    .nav-bar-img img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+    }
+
+    .nav-bar-img p {
+        margin-left: 5px;
+        color: black;
+        margin-top: 6px;
+    }
+
+    .moon-icon {
+        background-color: white;
+        border-radius: 50%;
+        padding: 10px;
+        font-size: 20px;
+        margin-right: 20px;
+        cursor: pointer;
+        border: 1px solid black;
+    }
+    .moon-icon:hover{
+        color:wheat;
+        background-color: #0c281d;
+    }
+
+    .indent-icon {
+        border-radius: 50%;
+        padding: 10px;
+        font-size: 30px;
+        margin-right: 90px;
+        cursor: pointer;
+    }
+
+    .side-bar-dropdown li {
+        padding: 7px 5px 7px 20px;
+        margin: 0;
+        font-weight: 600; 
+        font-size: 20px;
+        color:silver
+    }
+    .side-bar-dropdown {
+        display: none;
+    }
+    .side-bar-dropdown ul{
+        padding: 0;
+        list-style-type: none;
+    }
+    .side-bar-dropdown li:hover {
+        background-color: var(--primary);
+        border-radius: 10px;
+    }
+    .active-side-bar-body h5{
+    color: black;
+    font-size: 20px;
+        font-weight: 700;
+        
+    }
+
+    .active-side-bar-body>.user-icon{
+    color: green;
+    }
+    .active-side-bar-body>.badge-icon{
+        color: green;
+    }
+    .active-side-bar-body>.discounts-icon{
+        color: green;
+    }
+    .active-side-bar-body>.customers-icon{
+        color: green;
+    }
+    .active-side-bar-body>.suppeiers-icon{
+    color: green;
+    }
