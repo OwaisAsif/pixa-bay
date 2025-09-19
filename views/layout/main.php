@@ -33,7 +33,7 @@
 
                 </ul>
 
-                <button class="btn-1 h-50 w-60 py-2 px-3" type="login">Login</button>
+                <button class="btn-1 h-50 w-60 py-2 px-3 z-index" type="login">Login</button>
                 <button class="btn-2 mx-4 h-50 w-70 py-2 px-3" type="join">Join</button>
                 <button class="btn-3 mr-5 h-50 w-60 py-2 px-3" type="upload">Upload</button>
 

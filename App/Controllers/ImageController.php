@@ -45,19 +45,27 @@ class ImageController {
 }
 
 
-     public function getAllimages($conn) {
+   public function getAllimages($conn) {
     $images = [];
-    $sql = "SELECT * FROM image";
+    $sql = "SELECT image.*, users.id AS user_id, users.first_name, users.last_name 
+            FROM image 
+            JOIN users ON image.user_id = users.id";
+
     $result = $conn->query($sql);
 
     if ($result && $result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
+           
+            if (!empty($row['categories'])) {
+                $row['categories'] = json_decode($row['categories'], true);
+            }
             $images[] = $row;
         }
     }
 
     return ["images" => $images, "success" => true];
 }
+
         
 //   public function delete_image($conn, $data) {
 //     try {
