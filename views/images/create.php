@@ -5,9 +5,7 @@ require_once __DIR__ . "../../../views/layout/nav.php";
 require_once __DIR__. "../../../views/layout/sidebar.php";
 ?>
 
-
-<link rel="stylesheet" href="../../Assets/css/add-image.css">
-
+S
   <section class="add-image-form">
     <h2>Add New Image</h2>
     <form action="../../App/RequestManager/RequestManager.php" id="addImageForm" enctype="multipart/form-data">

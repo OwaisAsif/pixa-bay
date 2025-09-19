@@ -1,6 +1,6 @@
 .header-section {
   height: 70vh;
-  background-image: url(./pics/3/leaves-8962041_1280.jpg);
+  background-image: url(../pics/pics/chiemsee-lake-8523044_1280.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -28,7 +28,7 @@
 }
 
 .navbar {
-  z-index: 100;
+  z-index: 1000;
 }
 
 .h {
