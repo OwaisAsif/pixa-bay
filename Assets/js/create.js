@@ -15,18 +15,17 @@ $(document).ready(function () {
         try {
           let res = JSON.parse(response);
           if (res.status === "success") {
-            alert("✅ Image uploaded successfully!");
+            alert(" Image uploaded successfully!");
             $("#addImageForm")[0].reset(); 
           } else {
-            alert("❌ " + res.message);
+            alert("an error occur " + res.message);
           }
         } catch (e) {
-          alert("❌ Unexpected response from server.");
+          alert(" Unexpected response from server.");
         }
       },
       error: function (xhr, status, error) {
         console.error(error);
-        alert("❌ Something went wrong. Please try again.");
       },
     });
   });

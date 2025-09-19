@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="../../Assets/css/main.css">
 
 </head>
-
 <body>
     <nav class="navbar navbar-expand-lg bg-transparent position-fixed w-100 p-0">
         <div class="container-fluid">
