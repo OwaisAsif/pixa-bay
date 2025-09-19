@@ -1,30 +1,50 @@
 <?php
 class ImageController {
     
-    public function addimages($conn, $data) {
+  public function addimages($conn, $data) {
     try { 
-    $name = $data["name"];  
-    $description = $data["description"];
-    $category = $data["category"]; 
-    $file_name = $_FILES["image"];
-    $temp_name = $_FILES["image"];
-    $folder = '../../assets/images/'. $file_name;
-    $sql = "INSERT INTO image (category,description,name,file) values ('$category','$description','$name','$file_name')";
-       if(move_uploaded_file($temp_name,$folder)){
-         echo "file uploaded";
-         } else {
-          echo "file  not uploaded";
-         }
-    
-     if ($conn->query($sql) === TRUE) {
-         return ["success" => true, "message" => "User added successfully"];
-     } else {
-         return ["success" => false, "message" => $conn->error];
-     }
+        $name = $data["name"];  
+        $description = $data["description"];       
+        $categories = isset($data["category"]) ? json_encode($data["category"]) : json_encode([]); 
+        $file_name = basename($_FILES["image"]["name"]);
+        $temp_name = $_FILES["image"]["tmp_name"];
+        $uploadDir = __DIR__ . "/../../assets/image/";
+        if (!is_dir($uploadDir)) {
+            mkdir($uploadDir, 0777, true); 
+        }
+        $targetFile = $uploadDir . $file_name;
+
+        if (move_uploaded_file($temp_name, $targetFile)) {
+            $fileMessage = "File uploaded successfully";
+        } else {
+            $fileMessage = "File not uploaded";
+        }
+
+        $stmt = $conn->prepare("INSERT INTO image (description, name, file, categories) VALUES (?, ?, ?, ?)");
+        $stmt->bind_param("ssss", $description, $name, $file_name, $categories);
+
+        if ($stmt->execute()) {
+            return [
+                "success" => true, 
+                "message" => "Image added successfully", 
+                "file_status" => $fileMessage
+            ];
+        } else {
+            return [
+                "success" => false, 
+                "message" => $stmt->error
+            ];
+        }
+
     } catch (\Exception $e) {
-     return ["success" => false, "message" => $e->getMessage()];
+        return [
+            "success" => false, 
+            "message" => $e->getMessage()
+        ];
     }
-    }
+}
+
+
      public function getAllimages($conn) {
     $images = [];
     $sql = "SELECT * FROM image";

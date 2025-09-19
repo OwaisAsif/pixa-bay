@@ -1,7 +1,7 @@
 
                 <div id="side-bar">
                     <div class="ml-2">
-                        <h4>Dashborad</h4>
+                        <h4>Dashboard</h4>
                         <span>MENU</span>
                     </div>
                     <div class="side-bar-body">
