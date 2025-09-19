@@ -24,7 +24,7 @@ class AuthController {
         $user = $result->fetch_assoc();
         if(isset($user) && $user['password'] == $pass) {
             $_SESSION["logged_in_id"] = $user["id"]; 
-            header("Location: ../../views/welcome.php");
+            header("Location: ../../views/layout/main.php");
             exit();
         }
         $conn->close();
