@@ -1,8 +1,7 @@
-<link rel="stylesheet" href="../../assets/css/create.css">
+<link rel="stylesheet" href="../../assets/css/upload.css">
 <?php
 require_once __DIR__ . "../../../views/layout/header.php";
-require_once __DIR__ . "../../../views/layout/nav.php";
-require_once __DIR__. "../../../views/layout/sidebar.php";
+
 ?>
 
 
