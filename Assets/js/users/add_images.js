@@ -1,19 +1,24 @@
   $.ajax({
-        url: `https://jsonplaceholder.typicode.com/todos/${id}`,
+        url: "http://localhost/PIXA-BAY/app/RequestManager/RequestManager.php?request-type=get-all-images",
         method: "GET",
         dataType: "json",
         success: function (task) {
           let html = `
-            <div class="col-6">
-              <div class="card shadow">
-                <div class="card-body">
-                  <h2 class="card-title">Task #${task.id}</h2>
-                  <p class="card-text"><strong>Title:</strong> ${task.title}</p>
-                  <p class="card-text"><strong>Completed:</strong> ${task.completed}</p>
-                  <h4 class="card-subtitle text-muted">User ID: ${task.userId}</h4>
+            <section style="padding: 20px;">
+        <div class="row">
+            <div class="col-3">
+                <div class="row">
+                    <div class="col-12"><img src="" alt=""></div>
+                    <div class="col-12"><img src=""alt=""></div>
+                    <div class="col-12"><img src="" alt=""></div>
+                    <div class="col-12"><img src="" alt=""></div>
+                    <div class="col-12"><img src="" alt=""></div>
+                    <div class="col-12"><img src="" alt=""></div>
+                    <div class="col-12"><img src="" alt=""></div>
                 </div>
-              </div>
             </div>
+           
+    </section>
           `
           $(".row").html(html)
         },

@@ -5,9 +5,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../../assets/css/cdn/bootstrap.min.css">
   <link rel="stylesheet" href="../../assets/css/auth.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="../../assets/css/cdn/finalbootstrap.min.css">
   
   <title>Login</title>
 
@@ -41,7 +41,7 @@
         <button type="submit" class="btn bg-linear-primary text-white w-100">Login</button>
       </form>
       <div class="link-text mt-3 ">
-        <p>Don't have an account? <a class="text text-primary" href="signup.html">Signup </a></p>
+        <p>Don't have an account? <a class="text text-primary" href="signup.php">Signup </a></p>
       </div>
     </div>
   </div>
