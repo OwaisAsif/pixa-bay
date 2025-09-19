@@ -10,18 +10,21 @@ require_once __DIR__. "../../../views/layout/sidebar.php";
 
   <section class="add-image-form">
     <h2>Add New Image</h2>
-    <form id="addImageForm" enctype="multipart/form-data">
+    <form action="../../App/RequestManager/RequestManager.php" id="addImageForm" enctype="multipart/form-data">
       
+      <!-- Name -->
       <div class="form-group">
         <label for="name">Image Name</label>
         <input type="text" id="name" name="name" placeholder="Enter image name" required>
       </div>
 
+      <!-- Description -->
       <div class="form-group">
         <label for="description">Description</label>
         <textarea id="description" name="description" rows="4" placeholder="Enter image description" required></textarea>
       </div>
 
+      <!-- Category -->
       <div class="form-group">
         <label for="category">Category</label>
         <select id="category" name="category" required>
@@ -36,11 +39,13 @@ require_once __DIR__. "../../../views/layout/sidebar.php";
         </select>
       </div>
 
+      <!-- Upload Image -->
       <div class="form-group">
         <label for="image">Upload Image</label>
         <input type="file" id="image" name="image" accept="image/*" required>
       </div>
 
+      <!-- Submit -->
       <div class="form-actions">
         <button type="submit">Add Image</button>
       </div>

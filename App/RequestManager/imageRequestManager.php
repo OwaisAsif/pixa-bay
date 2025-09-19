@@ -5,7 +5,7 @@ include '../utilities/server.php';
 
 header("Content-Type: application/json"); 
 
-$controller = new UserController(); 
+$controller = new ImageController(); 
 
 if ($_SERVER['REQUEST_METHOD'] == "GET") {
     $request_type = isset($_GET["request-type"]) ? $_GET["request-type"] : null;
