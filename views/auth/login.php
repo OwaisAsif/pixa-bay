@@ -13,10 +13,10 @@
 
 </head>
 
-<body class="bg-linear-primary">
+<body class="body">
  <div class="auth-wrap">
     <img src="../../assets/images/logingirl.png" class="side-imgg" alt="Key">
-  <div class="form-box bg-white">
+  <div class="form-box ">
     <div class="form-header">Login</div>
     <div class="form-body">
       <form action="../../app/RequestManager/RequestManager.php" method="post">
@@ -38,7 +38,7 @@
             <input type="password" class="form-control" id="password" name="pass" placeholder="Enter password" minlength="4" required>
           </div>
         </div>
-        <button type="submit" class="btn bg-linear-primary text-white w-100">Login</button>
+        <button type="submit" class="login">Login</button>
       </form>
       <div class="link-text mt-3 ">
         <p>Don't have an account? <a class="text text-primary" href="signup.php">Signup </a></p>

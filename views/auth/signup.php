@@ -10,9 +10,9 @@
   <title>Signup</title>
 </head>
 
-<body class="bg-linear-primary">
+<body class="body-signup">
     <div class="auth-wrap">
-  <div class="form-box-signup bg-white">
+  <div class="form-box-signup ">
     <div class="form-header">Signup</div>
     <div class="form-body">
       <form action="../../app/RequestManager/RequestManager.php" method="post">
@@ -21,7 +21,7 @@
           <label>First name</label>
           <div class="input-group">
             <span class="input-group-text"><i class="fa-solid fa-user  text-primary"></i></span>
-            <input type="text" class="form-control" placeholder="Enter first name" name="first_name" required>
+            <input type="text" class="form-control" id="input-signup" placeholder="Enter first name" name="first_name" required>
           </div>
         </div>
 
@@ -71,7 +71,7 @@
           </div>
         </div>
 
-        <button type="submit" class="btn  bg-linear-primary text-white w-100">Signup</button>
+        <button type="submit" class="login">Signup</button>
       </form>
 
       <div class="link-text">
