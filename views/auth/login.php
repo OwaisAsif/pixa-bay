@@ -12,7 +12,6 @@
   <title>Login</title>
 
 </head>
-
 <body class="bg-linear-primary">
  <div class="auth-wrap">
     <img src="../../assets/images/logingirl.png" class="side-imgg" alt="Key">
