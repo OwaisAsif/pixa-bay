@@ -30,23 +30,14 @@ class AuthController {
         $conn->close();
     }
     
-   public function logout($conn) {
-    try {
-        session_start();
-        session_unset();
-        session_destroy();
-
-        return [
-            "success" => true,
-            "message" => "Logged out successfully"
-        ];
-    } catch (\Exception $e) {
-        return [
-            "success" => false,
-            "message" => $e->getMessage()
-        ];
-    }
+  public function logout($conn) {
+    session_start();
+    session_unset();
+    session_destroy();
+    header("Location: ../../views/auth/login.php");
+    exit();
 }
+
 
 }
 
