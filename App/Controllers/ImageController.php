@@ -1,11 +1,20 @@
 <?php
 class ImageController {
     
-  public function addimages($conn, $data) {
+ public function addimages($conn, $data) {
     try { 
-        $name = $data["name"];  
+        $name        = $data["name"];  
         $description = $data["description"];       
-        $categories = isset($data["category"]) ? json_encode($data["category"]) : json_encode([]); 
+        $categories  = isset($data["category"]) ? json_encode($data["category"]) : json_encode([]); 
+
+  
+        session_start();
+        if (!isset($_SESSION["logged_in_id"])) {
+            return ["success" => false, "message" => "User not logged in"];
+        }
+        $user_id = $_SESSION["logged_in_id"];
+
+       
         $file_name = basename($_FILES["image"]["name"]);
         $temp_name = $_FILES["image"]["tmp_name"];
         $uploadDir = __DIR__ . "/../../assets/image/";
@@ -20,8 +29,11 @@ class ImageController {
             $fileMessage = "File not uploaded";
         }
 
-        $stmt = $conn->prepare("INSERT INTO image (description, name, file, categories) VALUES (?, ?, ?, ?)");
-        $stmt->bind_param("ssss", $description, $name, $file_name, $categories);
+        $stmt = $conn->prepare(
+            "INSERT INTO image (user_id, description, name, file, categories) 
+             VALUES (?, ?, ?, ?, ?)"
+        );
+        $stmt->bind_param("issss", $user_id, $description, $name, $file_name, $categories);
 
         if ($stmt->execute()) {
             return [
@@ -45,25 +57,28 @@ class ImageController {
 }
 
 
+
    public function getAllimages($conn) {
     $images = [];
-    $sql = "SELECT image.*, users.id AS user_id, users.first_name, users.last_name 
-            FROM image 
-            JOIN users ON image.user_id = users.id";
+    // $sql = "SELECT image.*, users.id AS user_id, users.first_name, users.last_name 
+    //         FROM image 
+    //         JOIN users ON image.user_id = users.id";
+    $sql = "SELECT * FROM image";
 
     $result = $conn->query($sql);
 
     if ($result && $result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
-           
-            if (!empty($row['categories'])) {
-                $row['categories'] = json_decode($row['categories'], true);
-            }
+            
+            $uid = $row["user_id"];
+            $sql = "SELECT * FROM users WHERE users.id = '$uid'";
+            $result2 = $conn->query($sql);
+            $row["user"] = $result2->fetch_assoc();
             $images[] = $row;
         }
     }
-
     return ["images" => $images, "success" => true];
+
 }
 
         
