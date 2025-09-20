@@ -40,7 +40,7 @@ require_once __DIR__ . "../../../views/layout/header.php";
       </div>
 
       <div class="form-actions">
-     <a href="../layout/main.php">  <button type="submit">Add Image</button></a>
+     <a href="../layout/main.php"><button>Add Image</button></a>
       </div>
     </form>
   </section>

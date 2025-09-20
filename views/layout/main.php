@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -34,8 +35,9 @@
                     </li>
 
                 </ul>
-
+<?php  if (!isset($_SESSION["logged_in_id"])){?>
               <a href="../../views/auth/login.php">  <button  class="btn-1 h-50 w-60 py-2 px-3" type="login">Login </button></a>
+              <?php  } ?>
                <a href="../../views/images/upload.php"> <button class="btn-3 mr-5 h-50 w-60 py-2 px-3" type="upload"> Upload</button></a>
 
             </div>
