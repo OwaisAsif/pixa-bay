@@ -58,7 +58,7 @@ h2 {
 
 
 .btn-1 {
-  background-color: transparent;
+  background-color:  rgb(48, 47, 46);
   opacity: 0.777;
   color: white;
   font-weight: 700;
@@ -66,35 +66,26 @@ h2 {
   font-size: medium;
   border-radius: 30px;
   border: none;
+  position: relative;
+  right: 20px;
 }
 
 .btn-1:hover {
   background-color: rgb(80, 44, 44);
 }
 
-.btn-2 {
-  background-color: rgba(93, 77, 77, 0.444);
-  padding: 10px;
-  color: rgba(255, 246, 246, 0.9);
-  font-weight: 700;
-  font-size: medium;
-  border-radius: 50px;
-  border: none;
-  outline: rgb(122, 103, 103);
-}
-
-.btn-2:hover {
-  outline: white;
-}
 
 .btn-3 {
-  background-color: #14BC7D;
+  background-color: rgb(48, 47, 46);
   color: white;
   font-weight: 700;
   font-size: medium;
   border-radius: 30px;
   border: none;
   margin-right: 20px;
+}
+.btn-3:hover {
+  background-color: rgb(80, 44, 44);
 }
 
 .btn {
@@ -213,3 +204,6 @@ body {
 .footer-bottom a:hover {
   text-decoration: underline;
 }
+
+
+  

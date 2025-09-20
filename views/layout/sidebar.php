@@ -12,8 +12,7 @@
                         </div>
                         <div class="side-bar-dropdown">
                             <ul>
-                                <li>List</li>
-                                <li>Role</li>
+                            <a href="../Users/list.php"><li>List</li></a>   
                                 
                             </ul>
                         </div>
@@ -27,7 +26,8 @@
                         </div>
                         <div class="side-bar-dropdown">
                             <ul>
-                                <li>Create</li>
+                       <a href="../../views/images/create.php"> <li>Create</li> </a> 
+
                                 <li>List</li>
 
                             </ul>

@@ -6,7 +6,7 @@ require_once __DIR__ . "../../../views/layout/header.php";
 
 
   <section class="add-image-form">
-    <h2>Add New Image</h2>
+    <h2>UPLOAD IMAGE</h2>
     <form action="../../App/RequestManager/RequestManager.php" id="addImageForm" enctype="multipart/form-data">
       
       <div class="form-group">

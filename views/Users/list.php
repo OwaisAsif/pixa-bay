@@ -6,7 +6,6 @@ require_once __DIR__. "../../../views/layout/sidebar.php";
 ?>
 
 
-
 <div class="main">
   <div class="bread-crumb">
     <h3 class="heading-text text-primary fw-bold">👱🏿 Users List</h3>

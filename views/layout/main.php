@@ -10,6 +10,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>
+      <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
 
     <link rel="stylesheet" href="../../Assets/css/main.css">
 
@@ -33,9 +35,8 @@
 
                 </ul>
 
-                <button class="btn-1 h-50 w-60 py-2 px-3" type="login"  > <a href="../../views/auth/login.php">Login</a> </button>
-                <button class="btn-2 mx-4 h-50 w-70 py-2 px-3" type="join">Join</button>
-                <button class="btn-3 mr-5 h-50 w-60 py-2 px-3" type="upload"> <a href="../../views/images/upload.php">Upload</a></button>
+              <a href="../../views/auth/login.php">  <button  class="btn-1 h-50 w-60 py-2 px-3" type="login">Login </button></a>
+               <a href="../../views/images/upload.php"> <button class="btn-3 mr-5 h-50 w-60 py-2 px-3" type="upload"> Upload</button></a>
 
             </div>
         </div>
@@ -203,3 +204,4 @@
 
 </body>
 </html>
+<script src="../../Assets/js/users/add_images.js"></script>
