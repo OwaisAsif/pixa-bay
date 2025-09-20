@@ -42,7 +42,6 @@
         </div>
     </nav>
 
-
     <section class="header-section">
         <div class="container-2">
             <div class="row">
@@ -93,19 +92,27 @@
     </section>
 
     <section style="padding: 20px;">
-        <div class="row">
-            <div class="col-3">
-                <div class="row">
-                    <div class="col-12"><img src="../../Assets/pics/pics/2/donkey-8575524_1280.jpg" alt=""></div>
-                    <div class="col-12"><img src="../../Assets/pics/pics/1/basket-to-the-sea-8449952_1280.jpg" alt=""></div>
-                    <div class="col-12"><img src="../../Assets/pics/pics/3/lion-8947711_1280.jpg" alt=""></div>
-                    <div class="col-12"><img src="../../Assets/pics/pics/1/blue-tit-8432158_1280.jpg" alt=""></div>
-                    <div class="col-12"><img src="../../Assets/pics/pics/1/businessman-1477601_1280.jpg" alt=""></div>
-                    <div class="col-12"><img src="../../Assets/pics/pics/mountains-7543273_1280.jpg" alt=""></div>
-                    <div class="col-12"><img src="../../Assets/pics/pics/pasta-8865344_1280.jpg" alt=""></div>
-                </div>
+    <div class="row" id="image-section">
+        <div class="col-3">
+            <div class="row" id="col-0">
             </div>
-            <div class="col-3">
+        </div>
+        <div class="col-3">
+            <div class="row" id="col-1">
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="row" id="col-2">
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="row" id="col-3">
+            </div>
+        </div>
+    </div>
+</section>
+
+            <!-- <div class="col-3">
                 <div class="row">
                     <div class="col-12"><img src="../../Assets/pics/pics/2/cabin-8579310_1280.jpg" alt=""></div>
                     <div class="col-12"><img src="../../Assets/pics/pics/2/concert-hall-8593024_1280.jpg" alt=""></div>
@@ -140,7 +147,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <section class='px-5 py-4 border mb-4'>
         <div class="d-flex">
@@ -205,3 +212,7 @@
 </body>
 </html>
 <script src="../../Assets/js/users/add_images.js"></script>
+
+
+
+
