@@ -1,3 +1,4 @@
+<?php include "../../App/utilities/Auth.php"; ?>
 <link rel="stylesheet" href="../../assets/css/upload.css">
 <?php
 require_once __DIR__ . "../../../views/layout/header.php";
@@ -39,7 +40,7 @@ require_once __DIR__ . "../../../views/layout/header.php";
       </div>
 
       <div class="form-actions">
-        <button type="submit">Add Image</button>
+        <button type="submit"><a href="../layout/main.php">Add Image</a></button>
       </div>
     </form>
   </section>

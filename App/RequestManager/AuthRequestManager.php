@@ -15,12 +15,11 @@ $request_type = $_POST["request-type"] ?? $_GET["request-type"] ?? null;
 
       $controller->login($conn, $_POST);
    
-   } else if ($request_type === 'logout') {
-
-        echo json_encode($controller->logout($conn, $_POST));
-        exit;
-    
-      }
+   }  else if ($request_type === 'logout') {
+    $controller->logout($conn);
 }
+}
+
+
 
 ?>
