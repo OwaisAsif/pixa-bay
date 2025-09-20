@@ -9,7 +9,7 @@ $.ajax({
       let imgHtml = `
         <div class="col-12 mb-3">
           <img src="http://localhost/PIXA-BAY/Assets/image/${user.file}" 
-               alt="${user.name}" 
+               alt="${user.first_name}" 
                class="img-fluid rounded shadow-sm">
         </div>
       `;
