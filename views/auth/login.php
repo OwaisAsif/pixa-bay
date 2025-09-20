@@ -10,13 +10,11 @@
   <link rel="stylesheet" href="../../assets/css/cdn/finalbootstrap.min.css">
   
   <title>Login</title>
-
 </head>
-
-<body class="body">
+<body class="bg-linear-primary">
  <div class="auth-wrap">
     <img src="../../assets/images/logingirl.png" class="side-imgg" alt="Key">
-  <div class="form-box ">
+  <div class="form-box bg-white">
     <div class="form-header">Login</div>
     <div class="form-body">
       <form action="../../app/RequestManager/RequestManager.php" method="post">
@@ -38,11 +36,7 @@
             <input type="password" class="form-control" id="password" name="pass" placeholder="Enter password" minlength="4" required>
           </div>
         </div>
-<<<<<<< HEAD
-        <button type="submit" class="login">Login</button>
-=======
         <button type="submit" class="btn bg-linear-primary text-white w-100" ><a  href="../../views/layout/main.php">Login</a></button>
->>>>>>> 9e30dcfa655060c8979b3fce680a5b8338da4a9b
       </form>
       <div class="link-text mt-3 ">
         <p>Don't have an account? <a class="text text-primary" href="signup.php">Signup </a></p>
