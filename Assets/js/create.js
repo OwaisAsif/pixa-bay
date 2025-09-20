@@ -12,17 +12,14 @@ $(document).ready(function () {
       processData: false,  
       success: function (response) {
         console.log(response);
-        try {
           let res = JSON.parse(response);
           if (res.status === "success") {
-            alert(" Image uploaded successfully!");
+    
             $("#addImageForm")[0].reset(); 
-          } else {
-            alert("an error occur " + res.message);
-          }
-        } catch (e) {
-          alert(" Unexpected response from server.");
-        }
+          } 
+          
+        
+        
       },
       error: function (xhr, status, error) {
         console.error(error);

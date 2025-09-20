@@ -2,40 +2,22 @@ $.ajax({
   url: "http://localhost/PIXA-BAY/app/RequestManager/RequestManager.php?request-type=get-all-images",
   method: "GET",
   dataType: "json",
-  success: function (response) {
-    let html = ""
-    response.users.forEach(function (user) {
-      html += `
-       
+  success: function(response) {
+    response.images.forEach(function(user, index) {
+      let colIndex = index % 4;
 
-          <section style="padding: 20px;">
-        <div class="row">
-            <div class="col-3">
-                <div class="row">
-                    <div class="col-12"><img src="${user.image}" alt=""></div>
-                    
-                </div>
-            </div>
-           
-    </section>
-      `
-    })
-    $("section row").append(html)
+      let imgHtml = `
+        <div class="col-12 mb-3">
+          <img src="http://localhost/PIXA-BAY/Assets/image/${user.file}" 
+               alt="${user.name}" 
+               class="img-fluid rounded shadow-sm">
+        </div>
+      `;
 
+      $(`#col-${colIndex}`).append(imgHtml);
+    });
   },
-  error: function (_, xhr, e) {
-    console.error(e)
+  error: function(_, xhr, e) {
+    console.error(e);
   }
-})
-
-
-
-
-
-
-
-
-
-
-
-
+});
