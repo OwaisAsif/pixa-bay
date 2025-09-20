@@ -38,7 +38,7 @@
             <input type="password" class="form-control" id="password" name="pass" placeholder="Enter password" minlength="4" required>
           </div>
         </div>
-        <button type="submit" class="login">Login</button>
+        <button type="submit" class="btn bg-linear-primary text-white w-100" ><a  href="../../views/layout/main.php">Login</a></button>
       </form>
       <div class="link-text mt-3 ">
         <p>Don't have an account? <a class="text text-primary" href="signup.php">Signup </a></p>
